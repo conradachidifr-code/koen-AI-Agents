@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBuddy - Your Database Buddy</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>DBuddy</h1>
+            <p class="subtitle">Your friendly database buddy - Ask questions in plain English</p>
+            <div class="status" id="status">
+                <span class="status-dot" id="statusDot"></span>
+                <span id="statusText">Checking connection...</span>
+            </div>
+        </header>
+
+        <div class="chat-container" id="chatContainer">
+            <div class="welcome-message">
+                <h2>Welcome!</h2>
+                <p>I can help you query your MySQL database using natural language.</p>
+                <p>Try asking questions like:</p>
+                <ul>
+                    <li>"Show me all users"</li>
+                    <li>"How many orders were placed last month?"</li>
+                    <li>"What are the top 5 products by revenue?"</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <form id="queryForm">
+                <input
+                    type="text"
+                    id="queryInput"
+                    placeholder="Ask a question about your database..."
+                    autocomplete="off"
+                    disabled
+                >
+                <button type="submit" id="submitBtn" disabled>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M2 10L18 10M18 10L11 3M18 10L11 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
